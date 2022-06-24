@@ -22,7 +22,7 @@ class PageRevealer extends React.Component {
                 document.getElementById("reveal_container").style.backgroundColor = "transparent"
                 setTimeout(() => { 
                     this.setState({animation: false, hide: true})
-                }, 500);
+                }, 400);
             }, 400);
         }
     }
@@ -34,11 +34,11 @@ class PageRevealer extends React.Component {
             return (
                 <AnimationContainer animation="fadeIn">
                     <BaffleText
-                        text="Abstract"
-                        revealDuration={500}
-                        revealDelay={1000}
+                        text="Turbo"
+                        revealDuration={0}
+                        revealDelay={600}
                         parentMethod={this.reveal}
-                        callMethodTime={2000}
+                        callMethodTime={1500}
                     />
                 </AnimationContainer>
             )

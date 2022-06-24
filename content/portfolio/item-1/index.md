@@ -1,7 +1,7 @@
 ---
 id: 1
 image: './image.jpg'
-title: "Front-end Development"
-category: "React.js"
-link: "https://github.com"
+title: "fish2o.ru"
+category: "fishDescription"
+link: "https://fish2o.ru"
 ---

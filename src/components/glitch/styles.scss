@@ -10,10 +10,11 @@
 .glitch {
   position: relative;
   color: #FFF;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 900;
   animation: glitch-skew 1s infinite linear alternate-reverse;
   line-height: 100px;
+  text-align: center;
   &::before{
       @include glitchCopy;
       left: 2px;

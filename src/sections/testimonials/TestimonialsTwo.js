@@ -42,7 +42,7 @@ class TestimonialsTwo extends React.Component {
         const Heading = styled.h1`
             font-size: 150px;
             line-height: 120px;
-            font-family: Teko;
+            font-family: Oswald;
             color: #fff;
             text-transform: uppercase;
             text-align: center;
@@ -62,7 +62,7 @@ class TestimonialsTwo extends React.Component {
             color:  #04e5e5;
             font-size: 155px;
             line-height: 120px;
-            font-family: Teko;
+            font-family: Oswald;
             text-transform: uppercase;
             letter-spacing: 2px;
             @media (min-width:768px) and (max-width:1399px) {

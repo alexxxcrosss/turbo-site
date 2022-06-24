@@ -1,7 +1,7 @@
 ---
 id: 2
 image: './image.jpg'
-title: "Front-end Project"
-category: "React.js"
-link: "https://github.com"
+title: "Bass Steel Profile"
+category: "bsProfileDescription"
+link: "http://bs-profile.com/"
 ---

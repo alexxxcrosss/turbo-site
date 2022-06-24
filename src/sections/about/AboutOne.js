@@ -42,7 +42,7 @@ class AboutOne extends React.Component {
         const Heading = styled.h1`
             font-size: 100px;
             line-height: 90px;
-            font-family: Teko;
+            font-family: Oswald;
             color: #fff;
             text-transform: uppercase;
             @media (min-width:768px) and (max-width:1399px) {
@@ -59,7 +59,7 @@ class AboutOne extends React.Component {
             color: #04e5e5;
             font-size: 120px;
             line-height: 100px;
-            font-family: Teko;
+            font-family: Oswald;
             text-transform: uppercase;
             letter-spacing: 2px;
             @media (min-width:768px) and (max-width:1399px) {
@@ -80,7 +80,7 @@ class AboutOne extends React.Component {
             }
             .value {
                 font-size: 120px;
-                font-family: Teko;
+                font-family: Oswald;
                 color: #fff;
                 line-height: 90px;
             }

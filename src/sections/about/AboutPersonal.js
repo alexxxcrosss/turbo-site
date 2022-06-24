@@ -5,6 +5,7 @@ import RevealContent from 'components/reveal-content'
 import { StaticQuery, graphql } from 'gatsby'
 import Counter from 'components/counter'
 import AnimationContainer from 'components/animation-container'
+import Particles from 'react-particles-js';
 import TabsPart from 'sections/about/parts/TabsPart'
 
 class AboutPersonal extends React.Component {
@@ -105,7 +106,7 @@ class AboutPersonal extends React.Component {
         const ImageContainer = styled.div`
             border-radius: 20px;
             overflow: hidden;
-            animation: ${AnimatedShadow} 10s infinite alternate;
+            /* animation: ${AnimatedShadow} 10s infinite alternate; */
             @media (max-width: 767px) {
                 margin-bottom: 50px;
             }
@@ -130,33 +131,32 @@ class AboutPersonal extends React.Component {
 
         const Heading = styled.h2`
             font-size: 70px;
-            font-family: Teko;
+            font-family: Oswald;
             color: #fff;
-            line-height: 50px;
+            line-height: 1;
         `
 
         const Text = styled.p`
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 300;
             color: #c5c5c5;
         `
 
         return(
             <Section id="about">
+                
                 <AboutContainer>
                     <Row>
                         <LeftCol md={6}>
-                            <AnimationContainer animation="fadeIn">
                                 <ImageContainer>
-                                    <RevealContent delay={500}>
+                                    <RevealContent delay={100}>
                                         <Image src={this.props.image.childImageSharp.fluid.src} alt="about" />
                                     </RevealContent>
                                 </ImageContainer>
-                            </AnimationContainer>
                         </LeftCol>
                         <Col md={6}>
                             <AnimationContainer animation="fadeIn">
-                                <Heading>About Me</Heading>
+                                <Heading>О нас</Heading>
                                 <Separator />
                                 <Text>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -165,11 +165,14 @@ class AboutPersonal extends React.Component {
                                     It was popularised in the 1960s with the release of 
                                     Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                 </Text>
-                                <TabsPart />
+                                {/*  <TabsPart /> */}
+                               
                             </AnimationContainer>
                         </Col>
                     </Row>
                 </AboutContainer>
+
+                {/*
                 <CounterRow>
                     <Container>
                         <Row>
@@ -204,6 +207,9 @@ class AboutPersonal extends React.Component {
                         </Row>
                     </Container>
                 </CounterRow>
+                
+                */}
+                
             </Section>
         )
     }
@@ -213,7 +219,7 @@ export default props => (
     <StaticQuery
       query={graphql`
       query {
-        image: file(relativePath: {eq: "about-me.jpg"}) {
+        image: file(relativePath: {eq: "about-us-6.jpg"}) {
           childImageSharp {
             fluid(maxHeight: 2000) {
               src

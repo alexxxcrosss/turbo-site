@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class Hero extends React.Component {
 
@@ -56,7 +57,7 @@ class Hero extends React.Component {
 
         const Heading1 = styled.h1`
             font-size: 80px;
-            font-family: Teko;
+            font-family: Oswald;
             line-height: 40px;
             color: #fff;
             font-weight: 400;
@@ -81,12 +82,15 @@ class Hero extends React.Component {
             color: #fff;
             font-weight: 700;
             text-transform: uppercase;
+            /*
             background: -webkit-linear-gradient(left, #00ffff , #007a7a);
             background: -o-linear-gradient(right, #00ffff, #007a7a);
             background: -moz-linear-gradient(right, #00ffff, #007a7a);
             background: linear-gradient(to right, #00ffff , #007a7a); 
            -webkit-background-clip: text;
            -webkit-text-fill-color: transparent;
+           */
+
             @media (max-width:767px) {
                 font-size: 40px;
                 line-height: 40px;
@@ -116,7 +120,7 @@ class Hero extends React.Component {
                 line-height: 20px;
             }
             span {
-                font-family: Teko;
+                font-family: Oswald;
             }
         `
         const Content = styled.div`
@@ -183,7 +187,7 @@ class Hero extends React.Component {
         const ServiceHeading = styled.h4`
             font-size: 30px;
             font-weight: 400;
-            font-family: Teko;
+            font-family: Oswald;
         `
         const ServiceSeparator = styled.div`
             height: 5px;
@@ -204,6 +208,7 @@ class Hero extends React.Component {
             font-weight: 300;
             color: #c5c5c5;
         `
+
         
         return (
                 <Section id="home">
@@ -214,7 +219,7 @@ class Hero extends React.Component {
                                     Creative
                                 </Heading1>
                                 <Heading2>
-                                    Digital Agency
+                                    < FormattedMessage id="common.title" />
                                 </Heading2>
                                 <Separator/>
                                 <Type>
@@ -292,7 +297,7 @@ export default props => (
     <StaticQuery
       query={graphql`
       query {
-        background: file(relativePath: {eq: "background-poly.jpg"}) {
+        background: file(relativePath: {eq: "bg-5.jpg"}) {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               src

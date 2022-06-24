@@ -69,15 +69,14 @@ class PortfolioThree extends React.Component {
             autoplay: true,
             autoplaySpeed: 10000,
             loop: true,
-            slidesToShow: this.state.width < 500 ? 1 : this.state.width > 500 && this.state.width <= 1024 ? 3 : 4,
-
+            slidesToShow: this.state.width < 500 ? 1 : this.state.width > 500 && this.state.width <= 1024 ? 3 : 3 
         }
         
         return (
             <Section id="portfolio">
                   <Col md={12} style={{padding: 0}}>
                     <Container>
-                      <AnimatedHeading text="Recent projects" />
+                      <AnimatedHeading text="Наши работы --" code="portfolio" />
                     </Container>
                     <PortfolioContainer>
                       <AnimationContainer animation="fadeIn">

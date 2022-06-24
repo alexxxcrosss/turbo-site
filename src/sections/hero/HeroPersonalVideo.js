@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
 import Typewriter from 'typewriter-effect'
-import LoopVideo from './assets/loop.mp4'
+import LoopVideo from './assets/home-1.mp4'
 import Glitch from 'components/glitch'
 class HeroPersonalVideo extends React.Component {
 
@@ -100,7 +100,7 @@ class HeroPersonalVideo extends React.Component {
                 line-height: 20px;
             }
             span {
-                font-family: Teko;
+                font-family: Montserrat;
             }
         `
         const gradientAnimation = keyframes`
@@ -125,6 +125,7 @@ class HeroPersonalVideo extends React.Component {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            background: rgb(255,255,255,.12);
             &:after {
                 content: '';
                 position: absolute;
@@ -189,7 +190,7 @@ class HeroPersonalVideo extends React.Component {
                             Download Resume
                         </Resume>
                     </HeadingBox>
-                    {this.shapes()}
+                    { /*this.shapes()*/ }
                 </VideoContainer>
             </Section>
         )

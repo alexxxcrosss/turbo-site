@@ -1,0 +1,184 @@
+2022-06-06 18:22:55 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Создание платежа для заказа №25319
+2022-06-06 18:22:55 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Amount calc 
+{
+    "order_total": "200.0000",
+    "kassa_currency": "RUB",
+    "has_currency": "true"
+}
+2022-06-06 18:22:55 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Send request: POST /payments 
+_body: {
+    "amount": {
+        "value": "200.00",
+        "currency": "RUB"
+    },
+    "description": "\u041e\u043f\u043b\u0430\u0442\u0430 \u0437\u0430\u043a\u0430\u0437\u0430 \u211625319",
+    "receipt": {
+        "items": [
+            {
+                "description": "\u041e\u0441\u0432\u0435\u0436\u0438\u0442\u0435\u043b\u044c \u0432\u043e\u0437\u0434\u0443\u0445\u0430 \u043d\u0430 \u0432\u043e\u0434\u043d\u043e\u0439 \u043e\u0441\u043d\u043e\u0432\u0435 Rossinka "Blossom" 250 \u043c\u043b",
+                "quantity": 1,
+                "amount": {
+                    "value": "50.00",
+                    "currency": "RUB"
+                },
+                "vat_code": 1,
+                "payment_subject": "commodity",
+                "payment_mode": "full_prepayment"
+            },
+            {
+                "description": "\u0421\u0443\u043c\u043c\u0430 \u0437\u0430\u043a\u0430\u0437\u0430 \u043e\u0442 3000 \u0440\u0443\u0431. \u043e\u0442 3-\u0445 \u0434\u043e 5-\u0442\u0438 \u043a\u0433 ",
+                "quantity": 1,
+                "amount": {
+                    "value": "150.00",
+                    "currency": "RUB"
+                },
+                "vat_code": 1,
+                "payment_subject": "commodity",
+                "payment_mode": "full_prepayment"
+            }
+        ],
+        "customer": {
+            "email": "sma_gin@list.ru"
+        }
+    },
+    "payment_method_data": {
+        "type": "bank_card"
+    },
+    "confirmation": {
+        "type": "redirect",
+        "return_url": "https:\/\/green-store.su\/index.php?route=payment\/yoomoney\/confirm&order_id=25319"
+    },
+    "metadata": {
+        "order_id": "25319",
+        "cms_name": "yoo_opencart15",
+        "module_version": "2.3.0"
+    },
+    "capture": true,
+    "save_payment_method": false,
+    "client_ip": "178.176.76.223"
+} 
+_headers: {
+    "Content-Type": "application\/json",
+    "Accept": "application\/json",
+    "Idempotence-Key": "d1f5f8fe-fae5-4f49-854e-076269c390be",
+    "YM-User-Agent": "CentOS.Linux\/7.8.2003 PHP\/5.6.40 OpenCart\/1.5.6.4 PaymentGateway\/2.3.0 YooKassa.PHP\/2.3.0",
+    "Authorization": "Basic MTAxOTg3OmxpdmVfSlJSbm5KTEdkV1k5bmlEb1hUSlgtd3l1V0MtRmZhc3RSYjhzUGJrV0d3aw=="
+}
+2022-06-06 18:22:56 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Response with code 200 received. 
+_body: {
+    "id": "2a302f90-000f-5000-9000-11b5ea6f22ca",
+    "status": "pending",
+    "amount": {
+        "value": "200.00",
+        "currency": "RUB"
+    },
+    "description": "\u041e\u043f\u043b\u0430\u0442\u0430 \u0437\u0430\u043a\u0430\u0437\u0430 \u211625319",
+    "recipient": {
+        "account_id": "101987",
+        "gateway_id": "202321"
+    },
+    "payment_method": {
+        "type": "bank_card",
+        "id": "2a302f90-000f-5000-9000-11b5ea6f22ca",
+        "saved": false
+    },
+    "created_at": "2022-06-06T15:22:56.252Z",
+    "confirmation": {
+        "type": "redirect",
+        "return_url": "https:\/\/green-store.su\/index.php?route=payment\/yoomoney\/confirm&order_id=25319",
+        "confirmation_url": "https:\/\/yoomoney.ru\/checkout\/payments\/v2\/contract?orderId=2a302f90-000f-5000-9000-11b5ea6f22ca"
+    },
+    "test": false,
+    "paid": false,
+    "refundable": false,
+    "metadata": {
+        "module_version": "2.3.0",
+        "order_id": "25319",
+        "cms_name": "yoo_opencart15"
+    }
+} 
+_headers: {
+    "0": "HTTP\/1.1 200",
+    "Server": "nginx",
+    "Date": "Mon, 06 Jun 2022 15:22:56 GMT",
+    "Content-Type": "application\/json;charset=UTF-8",
+    "Content-Length": "896",
+    "Connection": "keep-alive",
+    "Keep-Alive": "timeout=120",
+    "Signature": "v1 2a302f90 1 MGQCMGqXJ3fCOLj6z8SeWZRwLZwzwXVTlhOh20tCt7AobGadVjpAS7tRuysn6d5L7clHAAIwR3e26yPJ9P7TxEpcIygolcODfH5l5ESyeUhjEuC5igviyZX6H9IpfYag89F3eT9U",
+    "Strict-Transport-Security": "max-age=15768000"
+}
+2022-06-06 18:23:46 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Возврат пользователя из кассы для заказа №25319
+2022-06-06 18:23:46 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Send request: GET /payments/2a302f90-000f-5000-9000-11b5ea6f22ca 
+_headers: {
+    "Content-Type": "application\/json",
+    "Accept": "application\/json",
+    "YM-User-Agent": "CentOS.Linux\/7.8.2003 PHP\/5.6.40 OpenCart\/1.5.6.4 PaymentGateway\/2.3.0 YooKassa.PHP\/2.3.0",
+    "Authorization": "Basic MTAxOTg3OmxpdmVfSlJSbm5KTEdkV1k5bmlEb1hUSlgtd3l1V0MtRmZhc3RSYjhzUGJrV0d3aw=="
+}
+2022-06-06 18:23:46 - [info] [1] [dpj44fb3728i0jdklq1blm79p7] - Response with code 200 received. 
+_body: {
+    "id": "2a302f90-000f-5000-9000-11b5ea6f22ca",
+    "status": "succeeded",
+    "amount": {
+        "value": "200.00",
+        "currency": "RUB"
+    },
+    "income_amount": {
+        "value": "198.00",
+        "currency": "RUB"
+    },
+    "description": "\u041e\u043f\u043b\u0430\u0442\u0430 \u0437\u0430\u043a\u0430\u0437\u0430 \u211625319",
+    "recipient": {
+        "account_id": "101987",
+        "gateway_id": "202321"
+    },
+    "payment_method": {
+        "type": "bank_card",
+        "id": "2a302f90-000f-5000-9000-11b5ea6f22ca",
+        "saved": false,
+        "title": "Bank card *4752",
+        "card": {
+            "first6": "536829",
+            "last4": "4752",
+            "expiry_year": "2023",
+            "expiry_month": "04",
+            "card_type": "MasterCard",
+            "issuer_country": "RU",
+            "issuer_name": "VTB BANK (PUBLIC JOINT-STOCK COMPANY)"
+        }
+    },
+    "captured_at": "2022-06-06T15:23:45.104Z",
+    "created_at": "2022-06-06T15:22:56.252Z",
+    "test": false,
+    "refunded_amount": {
+        "value": "0.00",
+        "currency": "RUB"
+    },
+    "paid": true,
+    "refundable": true,
+    "receipt_registration": "pending",
+    "metadata": {
+        "module_version": "2.3.0",
+        "order_id": "25319",
+        "cms_name": "yoo_opencart15"
+    },
+    "authorization_details": {
+        "rrn": "037291131759",
+        "auth_code": "698L90",
+        "three_d_secure": {
+            "applied": true
+        }
+    }
+} 
+_headers: {
+    "0": "HTTP\/1.1 200",
+    "Server": "nginx",
+    "Date": "Mon, 06 Jun 2022 15:23:46 GMT",
+    "Content-Type": "application\/json;charset=UTF-8",
+    "Content-Length": "1291",
+    "Connection": "keep-alive",
+    "Keep-Alive": "timeout=120",
+    "Signature": "v1 2a302fc2 1 MGQCMBG8O7x2tbCMMLiRx63TjsHuTMpYSKH0UiW7nhmuFnOleZe2emJjqL+b\/MHfymzhyQIwMPX+y2QcADlY9CBHzNJOZbuTfoY\/CSRfskTzvdaIfGr9yW3Lw+jqnH+VM24u\/o\/B",
+    "Strict-Transport-Security": "max-age=15768000"
+}

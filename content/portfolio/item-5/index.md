@@ -1,7 +1,7 @@
 ---
-id: 5
+id: 4
 image: './image.jpg'
-title: "UI Deisgn for Company"
-category: "UI/UX Design"
-link: "https://github.com"
+title: "Kaminwork"
+category: "kaminDescription"
+link: "https://kaminwork.ru"
 ---

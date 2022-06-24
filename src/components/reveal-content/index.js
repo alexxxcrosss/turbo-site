@@ -52,7 +52,7 @@ class RC extends React.Component {
         setTimeout(() => { 
             resolve()
         }
-        , 2000);
+        , 1000);
       })
     }
 

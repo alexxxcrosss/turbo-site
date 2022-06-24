@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Abstract - Creative Agency Personal Portfolio Template',
+    title: 'Turbosite',
     description:
-      'Abstract is a beautiful template built using React and Gatsby for creative agency or personal projects',
+      'Creative web-agency',
   },
   pathPrefix: '/',
   plugins: [
@@ -50,16 +50,7 @@ module.exports = {
         name: 'team',
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Teko`,
-          `Poppins\:300,400,500,600,700`
-        ],
-        display: 'swap'
-      }
-    },
+    
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -67,6 +58,18 @@ module.exports = {
         transpileTemplateLiterals: false,
         pure: false,
         ssr: true,
+      },
+    },
+    // Multilangual settings
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`ro`, `ru`, `en`],
+        defaultLanguage: `ro`,
+        redirect: true,
+        redirect: true,
+        redirectComponent: require.resolve(`./src/components/redirect/index.js`),
       },
     },
     'gatsby-plugin-react-helmet',

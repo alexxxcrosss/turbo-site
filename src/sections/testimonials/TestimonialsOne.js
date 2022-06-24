@@ -39,7 +39,7 @@ class TestimonialsOne extends React.Component {
                     <Container>
                         <Row>
                             <Col md={12}>
-                                <AnimatedHeading text="Recent testimonials" />
+                                <AnimatedHeading text="Отзывы наших клиентов" code="testimonials" />
                             </Col>
                             <Col md={12}>
                                 <RevealContent>

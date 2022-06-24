@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import AnimationContainer from 'components/animation-container'
 import AnimatedHeading from 'components/animated-heading'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class ServicesTwo extends React.Component {
 
@@ -28,9 +29,9 @@ class ServicesTwo extends React.Component {
         `
 
          const ServiceHeading = styled.h4`
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 500;
-            font-family: Teko;
+            font-family: Oswald;
             color: #fff;
             margin-bottom: 0px;
         `
@@ -65,7 +66,7 @@ class ServicesTwo extends React.Component {
         `
 
          const ServiceText = styled.p`
-            font-size: 11px;
+            font-size: 14px;
             font-weight: 300;
             color: #c5c5c5;
             padding-right: 25px;
@@ -75,144 +76,105 @@ class ServicesTwo extends React.Component {
         return(
             <Section id="services">
                 <Container>
-                    <AnimatedHeading text="Our Services" />
+                    <AnimatedHeading text="Our Services" code="services" />
                     <ServiceRow>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInDown" delay={500}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInDown" delay={200}>
                                     <ServiceElement>
                                         <ServiceNumber>
                                             01
                                         </ServiceNumber>
                                         <ServiceHeading>
-                                            Mobile App Development
+                                           <FormattedMessage id="services.shopTitle" />
                                         </ServiceHeading>
                                         <ServiceSeparator/>
                                         <ServiceText>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        <FormattedMessage id="services.shopDescription" />
                                         </ServiceText>
                                     </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInDown"  delay={1000}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInDown"  delay={400}>
                                 <ServiceElement>
                                     <ServiceNumber>
                                         02
                                     </ServiceNumber>
                                     <ServiceHeading>
-                                        Web  Development
+                                    <FormattedMessage id="services.landingTitle" />
                                     </ServiceHeading>
                                     <ServiceSeparator/>
                                     <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    <FormattedMessage id="services.landingDescription" />
                                     </ServiceText>
                                 </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInDown" delay={1500}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInDown" delay={600}>
                                 <ServiceElement>
                                     <ServiceNumber>
                                         03
                                     </ServiceNumber>
                                     <ServiceHeading>
-                                        Email Marketing
+                                    <FormattedMessage id="services.coprporativeTitle" />
                                     </ServiceHeading>
                                     <ServiceSeparator/>
                                     <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    <FormattedMessage id="services.coprporativeDescription" />
                                     </ServiceText>
                                 </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInDown" delay={2000}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInDown" delay={800}>
                                 <ServiceElement>
                                     <ServiceNumber>
                                         04
                                     </ServiceNumber>
                                     <ServiceHeading>
-                                        Search Engine Optimization
+                                    <FormattedMessage id="services.mobileTitle" />
                                     </ServiceHeading>
                                     <ServiceSeparator/>
                                     <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    <FormattedMessage id="services.mobileDescription" />
                                     </ServiceText>
                                 </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInUp" delay={500}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInUp" delay={200}>
                                 <ServiceElement>
                                     <ServiceNumber>
                                         05
                                     </ServiceNumber>
                                     <ServiceHeading>
-                                        Network Management
+                                    <FormattedMessage id="services.seoTitle" />
                                     </ServiceHeading>
                                     <ServiceSeparator/>
                                     <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    <FormattedMessage id="services.seoDescription" />
                                     </ServiceText>
                                 </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInUp" delay={1000}>
+                        <Col md={4}>
+                            <AnimationContainer animation="fadeInUp" delay={400}>
                                 <ServiceElement>
                                     <ServiceNumber>
                                         06
                                     </ServiceNumber>
                                     <ServiceHeading>
-                                        UI/UX Development
+                                    <FormattedMessage id="services.revisionTitle" />
                                     </ServiceHeading>
                                     <ServiceSeparator/>
                                     <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    <FormattedMessage id="services.revisionDescription" />
                                     </ServiceText>
                                 </ServiceElement>
                             </AnimationContainer>
                         </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInUp" delay={1500}>
-                                <ServiceElement>
-                                    <ServiceNumber>
-                                        07
-                                    </ServiceNumber>
-                                    <ServiceHeading>
-                                        Database Management
-                                    </ServiceHeading>
-                                    <ServiceSeparator/>
-                                    <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                    </ServiceText>
-                                </ServiceElement>
-                            </AnimationContainer>
-                        </Col>
-                        <Col md={3}>
-                            <AnimationContainer animation="fadeInUp" delay={2000}>
-                                <ServiceElement>
-                                    <ServiceNumber>
-                                        08
-                                    </ServiceNumber>
-                                    <ServiceHeading>
-                                        Machine Learning
-                                    </ServiceHeading>
-                                    <ServiceSeparator/>
-                                    <ServiceText>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                    </ServiceText>
-                                </ServiceElement>
-                            </AnimationContainer>
-                        </Col>
+                      
                     </ServiceRow>
                 </Container>
             </Section>

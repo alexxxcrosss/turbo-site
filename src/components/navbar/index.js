@@ -1,9 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Container } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-var scrollToElement = require('scroll-to-element')
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FormattedMessage } from "gatsby-plugin-intl";
+import Language from '../language';
+
+var scrollToElement = require('scroll-to-element');
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -11,7 +14,7 @@ class Navbar extends React.Component {
         this.state = {
           collapse: false,
           sticky: false,
-          sections: this.props.sections ? this.props.sections : ['home', 'about', 'services', 'portfolio', 'testimonials', 'clients', 'team', 'blog', 'contact']
+          sections: this.props.sections ? this.props.sections : ['home', 'about', 'services', 'portfolio', 'testimonials', 'contact']
         }
     }
 
@@ -43,7 +46,7 @@ class Navbar extends React.Component {
     }
 
     collapseNav() {
-        console.log(this.state, 'col')
+        
         if (!this.state.collapse) {
             this.setState({ collapse: true })
         } else {
@@ -148,6 +151,7 @@ class Navbar extends React.Component {
                     <Nav className={`navbar navbar-expand-sm ${this.state.collapse === true ? 'expand' : 'hidden_mobile'}`}>
                         <NavInner className={`navbar-collapse collapse ${this.state.collapse === true ? 'show' : ''}`}>
                             <div className="navbar-nav">{this.navItems()}</div>
+                            <Language />
                         </NavInner>
                     </Nav>
                 </NavbarContainer>
@@ -157,12 +161,12 @@ class Navbar extends React.Component {
 
     navigate(id) {
         if (this.props.scroll) {
-            const el = document.getElementById(id)
+            const el = document.getElementById(id);
             scrollToElement(el, {
                 offset: 0,
                 ease: 'in-out-expo',
-                duration: 2000
-            })
+                duration: 1100
+            });
         } else {
             window.location.href = `./#${id}`;
         }
@@ -173,7 +177,7 @@ class Navbar extends React.Component {
             background: none;
             border: none;
             color: #fff;
-            text-transform: capitalize;
+            
             font-weight: 500;
             margin: 10px 5px;
             transition: .5s;
@@ -188,11 +192,10 @@ class Navbar extends React.Component {
                 margin: 2px;
             }
         `
-        
         return this.state.sections.map((value, index) => {
             return (
                 <NavItem key={index} onClick={() => this.navigate(value)}>
-                    {value}
+                    <FormattedMessage id={`nav.${value}`} />
                 </NavItem>
             )
         })

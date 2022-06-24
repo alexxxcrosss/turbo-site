@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Baffle from "baffle-react";
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 class DesktopContent extends React.Component {
     constructor(props) {
@@ -38,11 +39,11 @@ class DesktopContent extends React.Component {
             flex-direction: column;
             justify-content: flex-end;
             transition: .5s;
-            text-align: center;
             display: flex;
             &.active {
-                animation: ${Animation} 1s forwards;
-                background-image: linear-gradient(to top, rgba(4,229,229,1), rgba(255, 255, 255, 0));
+                animation: ${Animation} .5s forwards;
+               /* background-image: linear-gradient(to top, #02d2d2 50%, rgba(255, 255, 255, 0)); */
+               background-color: #222;
             }
         `
 
@@ -64,7 +65,6 @@ class DesktopContent extends React.Component {
             color: #fff;
             font-weight: 600;
             font-size: 25px;
-            text-align: center;
             @media (max-width:767px) {
                 font-size: 20px;
             }
@@ -72,15 +72,16 @@ class DesktopContent extends React.Component {
 
         const SubHeading = styled.h5`
             color: #fff;
-            font-size: 20px;
-            font-weight: 400;
-            text-transform: uppercase;
-            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            text-align:center;
+            padding: 20px 25px 45px 25px;
             @media (max-width:767px) {
                 font-size: 15px;
             }
         `
         if (this.state.show) {
+            const messgeId = `portfolio.${this.props.code}`;
             return (
                 <>
                     <Heading>
@@ -96,16 +97,7 @@ class DesktopContent extends React.Component {
                         </Baffle>
                     </Heading>
                     <SubHeading>
-                        <Baffle
-                            speed={50}
-                            characters="AaBbCcDeEeFfGgHhIiJjKkLlMmNnOpPpQqRrSsTtUuVvWwXxYyZ"
-                            obfuscate={false}
-                            update={true}
-                            revealDuration={1000}
-                            revealDelay={0}
-                        >
-                            {this.props.category}
-                        </Baffle>
+                    <FormattedMessage id={messgeId} />
                     </SubHeading>
                 </>
             )
