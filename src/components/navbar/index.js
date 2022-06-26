@@ -168,7 +168,7 @@ class Navbar extends React.Component {
                 duration: 1100
             });
         } else {
-            window.location.href = `./#${id}`;
+            window.location.href = `/#${id}`;
         }
     }
 

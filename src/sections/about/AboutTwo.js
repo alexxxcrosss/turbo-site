@@ -5,7 +5,7 @@ import styled from "styled-components";
 import RevealContent from "components/reveal-content";
 import AnimationContainer from "components/animation-container";
 import Particles from "react-particles-js";
-import Counter from "components/counter";
+import { FormattedMessage } from "gatsby-plugin-intl";
 
 class AboutTwo extends React.Component {
   shouldComponentUpdate() {
@@ -301,24 +301,18 @@ class AboutTwo extends React.Component {
                 <AnimationContainer animation="fadeIn" delay={1500}>
                   <AboutContent>
                     <Heading>
-                      Интернет-агенство <Color>Turbosite</Color>
+                      <FormattedMessage id="about.titleOne" />{" "}
+                      <Color>
+                        <FormattedMessage id="about.titleTwo" />
+                      </Color>
                     </Heading>
                     <Separator />
                     <Text>
-                      Turbosite - компания разработчик сайтов из Молдовы. Наш
-                      главный принцип: "клиент должен получить именно то, что
-                      он хочет". Наши сайты получаются максимально эффективным по соотношению цена-качество, а
-                      клиент ВСЕГДА остается доволен. 
-                      </Text>
-                      <Text>
-                       В нашей команде есть талантливые
-                      разработчики и опытные руководители, и наша компания в
-                      состоянии выполнить заказ любой сложности, но если клиент
-                      просит простой сайт, он получит именно простой сайт,
-                      который соответствует его бюджету. Если клиент просит
-                      высоконагруженный сайт с уникальным дизайном и
-                      всевозможными интеграциями - мы приложим все силы и выполним заказ любой сложности.
-                      </Text>
+                      <FormattedMessage id="about.descriptionOne" />
+                    </Text>
+                    <Text>
+                      <FormattedMessage id="about.descriptionTwo" />
+                    </Text>
                   </AboutContent>
                 </AnimationContainer>
               </Col>

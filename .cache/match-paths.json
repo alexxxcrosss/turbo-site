@@ -1,31 +1,19 @@
 [
     {
-        "path": "/en/404.html",
-        "matchPath": "/en/404.html"
-    },
-    {
-        "path": "/en/dev-404-page/",
-        "matchPath": "/en/dev-404-page/"
-    },
-    {
         "path": "/ro/404.html",
         "matchPath": "/ro/404.html"
     },
     {
-        "path": "/ro/dev-404-page/",
-        "matchPath": "/ro/dev-404-page/"
+        "path": "/ro/success/",
+        "matchPath": "/ro/success/"
     },
     {
         "path": "/ru/404.html",
         "matchPath": "/ru/404.html"
     },
     {
-        "path": "/ru/dev-404-page/",
-        "matchPath": "/ru/dev-404-page/"
-    },
-    {
-        "path": "/en/",
-        "matchPath": "/en/"
+        "path": "/ru/success/",
+        "matchPath": "/ru/success/"
     },
     {
         "path": "/ro/",
@@ -34,10 +22,6 @@
     {
         "path": "/ru/",
         "matchPath": "/ru/"
-    },
-    {
-        "path": "/en/404/",
-        "matchPath": "/en/*"
     },
     {
         "path": "/ro/404/",

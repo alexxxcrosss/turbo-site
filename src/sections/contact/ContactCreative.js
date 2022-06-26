@@ -35,6 +35,7 @@ class ContactCreative extends React.Component {
 
     const IconRow = styled(Row)`
       margin-top: 150px;
+      margin-bottom: 100px;
     `;
 
     const IconCol = styled(Col)`
@@ -54,9 +55,9 @@ class ContactCreative extends React.Component {
       background-color: #04e5e5;
       border-radius: 150px;
       transition: 0.5s;
-      display:flex;
-      justify-content:center;
-      align-items:center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     `;
 
     const InfoPart = styled.div`
@@ -98,17 +99,34 @@ class ContactCreative extends React.Component {
       }
     `;
 
+    const Heading = styled.h2`
+      font-size: 70px;
+      font-family: Oswald;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 25px;
+    `;
+
+    const FormTextWrapper = styled.div`
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:flex-start;
+    background: #181818;
+    padding: 15px 45px;
+    height: 100%;
+    text-align:left;
+    `;
+
+    const FormDescription = styled.p`
+    font-size:20px;
+    color: #fff;
+    line-height:1.2;
+    `;
+
     return (
       <Section id="contact">
         <Container>
-          <AnimationContainer animation="fadeIn">
-            <FormRow>
-              <ContactCol md={6}>
-                <ContactCreativeForm />
-              </ContactCol>
-              <ContactCol md={6}></ContactCol>
-            </FormRow>
-          </AnimationContainer>
           <IconRow>
             <IconCol md={4}>
               <InfoPart>
@@ -167,6 +185,22 @@ class ContactCreative extends React.Component {
               </InfoPart>
             </IconCol>
           </IconRow>
+          <AnimationContainer animation="fadeIn">
+            <FormRow>
+              <ContactCol md={6}>
+                <FormTextWrapper>
+                  <Heading>Остались вопросы?</Heading>
+                  <FormDescription>
+                    напишите нам и наши менеджеры <br/> свяжутся с вами в
+                    ближайшее время.
+                  </FormDescription>
+                  </FormTextWrapper>
+              </ContactCol>
+              <ContactCol md={6}>
+                <ContactCreativeForm />
+              </ContactCol>
+            </FormRow>
+          </AnimationContainer>
         </Container>
       </Section>
     );

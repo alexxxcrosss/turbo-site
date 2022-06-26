@@ -65,8 +65,8 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`ro`, `ru`, `en`],
-        defaultLanguage: `ro`,
+        languages: [`ro`, `ru`],
+        defaultLanguage: `ru`,
         redirect: true,
         redirect: true,
         redirectComponent: require.resolve(`./src/components/redirect/index.js`),

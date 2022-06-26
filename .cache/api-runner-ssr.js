@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[],"minify":false,"transpileTemplateLiterals":false,"pure":false,"ssr":true},
     },{
       plugin: require('/Volumes/data/turbo-site/data/node_modules/gatsby-plugin-intl/gatsby-ssr'),
-      options: {"plugins":[],"path":"/Volumes/data/turbo-site/data/src/intl","languages":["ro","ru","en"],"defaultLanguage":"ro","redirect":true,"redirectComponent":"/Volumes/data/turbo-site/data/src/components/redirect/index.js"},
+      options: {"plugins":[],"path":"/Volumes/data/turbo-site/data/src/intl","languages":["ro","ru"],"defaultLanguage":"ru","redirect":true,"redirectComponent":"/Volumes/data/turbo-site/data/src/components/redirect/index.js"},
     },{
       plugin: require('/Volumes/data/turbo-site/data/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},

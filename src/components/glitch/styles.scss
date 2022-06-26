@@ -59,3 +59,10 @@ $steps: 20;
     }
   }
 }
+
+.hasError {
+  border-color: #f23a3d !important
+}
+.errorMessage{
+  color: #f23a3d;
+}
